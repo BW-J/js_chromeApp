@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>study_js</title>
+</head>
+
+<body>
+    <div id="weather-div">
+        <span id="city">-</span>
+        <span id="weather">-</span>
+    </div>
+    <div id="container">
+        <h1 id="clock">00:00</h1>
+        <form id="login-form" class="hidden">
+            <input required maxlength="15" type="text" placeholder="what is your name?" />
+            <button>Log In</button>
+        </form>
+        <h2 id="greeting" class="hidden"></h2>
+        
+        <br />
+        <div id="quote">
+            <span></span><br />
+            <span></span>
+        </div>
+    </div>
+
+    <div id="todo-div">
+        <div id="todoList-div">
+            <ul id="todo-list"></ul>
+        </div>
+        <form id="todo-form" class="hidden">
+            <input size="30" placeholder="Write add To Do and Press Enter" />
+        </form>
+    </div>
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    
+</body>
+
+</html>

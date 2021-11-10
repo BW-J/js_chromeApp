@@ -1,0 +1,53 @@
+.hidden{
+    display:none;
+}
+
+body{
+    color:white;
+}
+
+#container{
+    margin : 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#clock{
+    font-size: 50px;
+}
+
+#todo-div{
+    vertical-align: bottom;
+    float:right;
+}
+
+#todo-div #todoList-div{
+    display:inline-block;
+    width: 400px;
+    height: 200px;
+    overflow-y: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+#todo-div #todoList-div::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+#todo-div button{
+    background-color: transparent;
+    border: 0px transparent solid;
+}
+
+#todo-div #todo-form{
+    text-align: center;
+}
+
+#weather-div{
+    text-align: right;
+}
+
+ul{
+    list-style:none;
+}
