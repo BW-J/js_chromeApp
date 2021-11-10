@@ -40,6 +40,24 @@ body{
     border: 0px transparent solid;
 }
 
+#login-form button{
+    background-color: transparent;
+    border: 0px transparent solid;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: text 0.5s ease-in-out;
+}
+
+#greeting-div button{
+    background-color: transparent;
+    border: 0px transparent solid;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: text 0.5s ease-in-out;
+}
+
 #todo-div #todo-form{
     text-align: center;
 }

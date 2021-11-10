@@ -1,6 +1,7 @@
 const loginInput = document.querySelector("#login-form input");
 const loginForm = document.querySelector("#login-form");
 const link = document.querySelector("a");
+const greetingDiv = document.getElementById("greeting-div");
 const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
@@ -16,7 +17,7 @@ function onLoginSubbmit(event){
 
 function paintGreetings(username){
     // show the greeting
-    greeting.classList.remove(HIDDEN_CLASSNAME);
+    greetingDiv.classList.remove(HIDDEN_CLASSNAME);
     greeting.innerText = `Hello ${username} !!`;
 }
 
@@ -30,3 +31,11 @@ if(savedUsername === null){
     // show the greeting
     paintGreetings(savedUsername);
 }
+
+greetingDiv.querySelector("button").addEventListener("click",function(){
+    loginInput.value ="";
+    localStorage.removeItem(USERNAME_KEY);
+    localStorage.removeItem(TODOS_KEY);
+    greetingDiv.classList.add(HIDDEN_CLASSNAME);
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+})

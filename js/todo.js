@@ -1,5 +1,7 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoList = document.getElementById("todo-list");
+const toDoDiv = document.getElementById("todo-div");
+const logoutBtn = document.getElementById("logoutBtn");
 
 const toDoInput = document.querySelector("#todo-form input");
 
@@ -45,9 +47,8 @@ function toDoSubmit(event){
     saveToDos();
 }
 
-function showToDoFrom(){
-    console.log("확인");
-    toDoForm.classList.remove("hidden");
+function showToDoForm(){
+    toDoDiv.classList.toggle("hidden");
 }
 
 toDoForm.addEventListener("submit",toDoSubmit);
@@ -57,10 +58,15 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 console.dir(greeting);
 
 if(savedToDos) {
-    showToDoFrom();
+    showToDoForm();
     const parsedToDos = JSON.parse(savedToDos);
     toDos = parsedToDos;
     parsedToDos.forEach(paintTodo);
 }
 
-loginForm.addEventListener("change",showToDoFrom);
+if(savedUsername){
+    toDoDiv.classList.remove("hidden");
+}
+
+loginForm.addEventListener("change",showToDoForm);
+logoutBtn.addEventListener("click",showToDoForm);

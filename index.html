@@ -18,10 +18,16 @@
         <h1 id="clock">00:00</h1>
         <form id="login-form" class="hidden">
             <input required maxlength="15" type="text" placeholder="what is your name?" />
-            <button>Log In</button>
+            <div>
+                <button>Sign In →</button>
+            </div>
         </form>
-        <h2 id="greeting" class="hidden"></h2>
-        
+        <div id="greeting-div" class="hidden">
+            <h2 id="greeting" ></h2>
+            <div>
+                <button id="logoutBtn">Sign Out →</button>
+            </div>
+        </div>
         <br />
         <div id="quote">
             <span></span><br />
@@ -29,11 +35,11 @@
         </div>
     </div>
 
-    <div id="todo-div">
+    <div id="todo-div" class="hidden">
         <div id="todoList-div">
             <ul id="todo-list"></ul>
         </div>
-        <form id="todo-form" class="hidden">
+        <form id="todo-form">
             <input size="30" placeholder="Write add To Do and Press Enter" />
         </form>
     </div>
